@@ -8,12 +8,16 @@
 
 body
 {
-    
+    font-family: helvetica, sans-serif;
     background-color: var(--background-white);
+	height: 100%;
+	width: 100%;
+
 }
 
 .text-primary{
-    color: var(--text-black)
+	font-family: helvetica, sans-serif;
+    color: var(--text-black);
 }
 
 /*assign full width inputs*/
@@ -31,7 +35,7 @@ input[type=password] {
 /*set a style for the buttons*/
 button {
 	background-color: var(--buttons-yellow);
-	color: white;
+	color: var(--text-black);
 	padding: 14px 20px;
 	margin: 8px 0;
 	border: none;
