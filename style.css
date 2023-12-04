@@ -1,16 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
 :root {
 	--primary-red: #ff6b6b;
 	--secondary-blue: #6b7bff;
-	--background-white: #f5f5f5;
+	--background-white: #fff;
 	--text-black: #333333;
 	--buttons-yellow: #ffd700;
 }
 
 body {
-	font-family: helvetica, sans-serif;
+	font-family: 'Koulen', sans-serif;
 	background-color: var(--background-white);
 	height: 100%;
 	width: 100%;
+	border-bottom: 1px solid var(--text-black);
+	max-width: 600px;
+	margin: 100px auto 0;
+	border-radius: 10px;
+	padding: 30px;
+	border: 20px solid white;
+    box-sizing: border-box;
 }
 
 .text-primary {
@@ -154,35 +163,49 @@ span.psw {
 	}
 }
 
+@media screen and (max-width: 600px) {
+    .header-box {
+        margin-bottom: 10px; /* Adjust margin for smaller screens */
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header-box {
+        margin-bottom: 30px; /* Adjust margin for larger screens */
+    }
+}
+
 .header-box {
-	background-color: var(--buttons-yellow);
-	border-radius: 10px;
-	padding: 20px;
-	text-align: center;
-	margin-bottom: 20px;
-	/* Add margin to the bottom */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .header-box h2 {
-	font-family: 'Rancho', sans-serif;
 	color: black;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-	font-size: 50px
+	font-size: 80px;
+	border-bottom: 1px solid #333;
+	margin-bottom: 0;
 }
 
 .form-label {
 	display: block;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 
 .form-input {
 	width: 100%;
 	padding: 12px 20px;
-	margin: 8px 0;
 	display: block;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
+	margin-bottom: 5px;
 }
+
 
 .form-header {
 	text-align: center;
@@ -193,6 +216,56 @@ span.psw {
 	font-size: 20px
 }
 
-.btn {
+.body-quiz{
+	background: var(--buttons-yellow);
+	margin: 0;
+	padding: 0;
+}
+
+.btn{
+	background: #fff;
+	color: var(--text-black);
+	font-weight: 500;
+	width: 100%;
+	border: 1px solid #333;
+	padding: 10px;
+	margin: 10px 0;
+	text-align: left;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]){  
+	background-color: #222;
+	color: #fff;
+}
+
+.quiz-title{
+	font-family: Koulen;
+}
+
+.quiz{
+	padding: 20px 0;
 	font-size: 20px
+}
+
+.quix h2{
+	font-size: 18px;
+}
+
+#next-btn {
+	background: #ff6b6b;
+	color: #333;
+	font-weight: 500;
+	width: 150px;
+	border: 0;
+	padding: 10px;
+	margin: 20px auto 0;
+	border-radius: 4px;
+	cursor: pointer;
+	display: none;
+}
+.correct{
+	background-color: #6b7bff;
 }
