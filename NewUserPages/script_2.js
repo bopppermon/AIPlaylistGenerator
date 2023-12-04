@@ -1,3 +1,4 @@
+
 const questions = [
 	{
 		question: "What is your favorite genre?",
@@ -39,13 +40,13 @@ const questions = [
 
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
-const nextButton = document.getElementById("answer-btn");
+const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = [];
 
 function startQuiz(){
-	currentQuestionindex = 0;
+	currentQuestionIndex = 0;
 	score = [];
 	nextButton.innerHTML = "Next";
 	showQuestion();
@@ -61,7 +62,7 @@ function showQuestion(){
 		const button = document.createElement("button");
 		button.innerHTML = answer.text;
 		button.classList.add("btn");
-		answerButton.appendChild(button);
+		answerButtons.appendChild(button);
 		button.addEventListener("click", selectAnswer);
 	});
 }
